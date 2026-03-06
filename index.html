@@ -1610,7 +1610,7 @@
                 processingText.innerText = "Connecting to Flask Agent API...";
 
                 try {
-                    const response = await fetch('https://voice2justice.onrender.com/api/process', {
+                   fetch('https://voice2justice-ai.onrender.com/api/process', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({ text: text, location: gpsLocation })
@@ -1792,3 +1792,4 @@
 
 
 </html>
+
