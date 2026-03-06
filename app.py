@@ -1,4 +1,5 @@
 from flask import Flask, send_from_directory, request, jsonify
+from flask_cors import CORS
 import sqlite3
 import os
 import datetime
@@ -7,6 +8,8 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 app = Flask(__name__)
+CORS(app)
+
 DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'complaints.db')
 
 # ── Email Setup ──────────────────────────────────────────────────
@@ -413,3 +416,4 @@ if __name__ == '__main__':
     print("  Open http://127.0.0.1:5000 in your browser")
     print("=" * 50)
     app.run(debug=True, host='127.0.0.1', port=5000)
+
