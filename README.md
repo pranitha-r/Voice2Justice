@@ -179,10 +179,6 @@ pip install -r requirements.txt
 ```bash
 python app.py
 ```
-
-### Render 
-```https://voice2justicee.onrender.com/
-```
 ---
 
 
